@@ -10,9 +10,6 @@ gpg --keyserver hkp://keys.gnupg.net --recv-key 249B39D24F25E3B6
 gpg --keyserver hkp://keys.gnupg.net --recv-key 04376F3EE0856959
 gpg --keyserver hkp://keys.gnupg.net --recv-key 2071B08A33BD3F06
 
-PATH=$1/bin:$PATH
-LD_LIBRARY_PATH=$1/lib
-
 tar_cmd="tar xvjf"
 gpg_verify="gpg -d"
 
