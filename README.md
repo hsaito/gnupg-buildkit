@@ -20,7 +20,6 @@ Currently, these scripts are mainly useful for upgrading GnuPG, because package 
 - GnuPG 1.4 or later
 - wget
 - bash
-- 
 
 License
 -------
