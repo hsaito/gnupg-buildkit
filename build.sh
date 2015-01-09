@@ -4,6 +4,8 @@
 set -e
 set -o pipefail
 
+cd files
+
 source packages.list
 
 gpg --keyserver hkp://keys.gnupg.net --recv-key 249B39D24F25E3B6
@@ -41,3 +43,4 @@ cd ..
 rm -r $package_pinentry
 
 echo "Build complete."
+cd ..

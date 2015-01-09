@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 set -o pipefail
-
+cd files
 source packages.list
 
 gpg --keyserver hkp://keys.gnupg.net --recv-key 4f25e3b6
@@ -24,3 +24,4 @@ done
 
 wget ftp://ftp.gnupg.org/gcrypt/pinentry/$package_pinentry.tar.bz2  ftp://ftp.gnupg.org/gcrypt/pinentry/$package_pinentry.tar.bz2.sig
 $gpg_verify $package_pinentry.tar.bz2.sig
+cd ..
