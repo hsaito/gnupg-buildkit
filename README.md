@@ -19,7 +19,7 @@ Requirements
 Currently, these scripts are mainly useful for upgrading GnuPG, because package verifications require existing GnuPG installed.
 
 - GnuPG 1.4 or later
-- wget
+- curl
 - bash
 
 License
