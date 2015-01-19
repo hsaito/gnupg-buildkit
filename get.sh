@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
 set -o pipefail
-cd files
 source packages.list
+
+cd files
 
 gpg --keyserver hkp://keys.gnupg.net --recv-key 4f25e3b6
 gpg --keyserver hkp://keys.gnupg.net --recv-key e0856959
