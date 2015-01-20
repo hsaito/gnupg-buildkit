@@ -5,10 +5,6 @@ source packages.list
 
 cd files
 
-#gpg --keyserver hkp://keys.gnupg.net --recv-key 4f25e3b6
-#gpg --keyserver hkp://keys.gnupg.net --recv-key e0856959
-#gpg --keyserver hkp://keys.gnupg.net --recv-key 33bd3f06
-
 gpg_verify="gpg -d"
 downloader="curl -# -O"
 

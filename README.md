@@ -11,6 +11,7 @@ Contents
 - get.sh -- Download the file
 - build.sh -- Normal build script. Arguments passed to configure
 - build_custom_path.sh -- Wrapper script to build GnuPG to custom prefix
+- updatesig.sh -- Script to update package signers' signatures
 - packages.list -- Contains the location of the package to download
 - GnuPG-2.1.torrent -- Experimental torrent file for downloading all the dependencies. While it's not seeded well, if you are trouble downloading "get.sh" script, you may want try this instead.
 
