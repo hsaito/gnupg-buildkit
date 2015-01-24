@@ -4,12 +4,15 @@
 set -e
 set -o pipefail
 
+tar_cmd="tar xvjf"
+gpg_verify="gpg -d"
+
+$gpg_verify build.sh.sig
+$gpg_verify packages.list.sig
+
 source packages.list
 
 cd files
-
-tar_cmd="tar xvjf"
-gpg_verify="gpg -d"
 
 for ((i=0;i<${#package_list[@]};++i)); do
 	$gpg_verify ${package_list[i]}-${package_version[i]}.tar.bz2.sig

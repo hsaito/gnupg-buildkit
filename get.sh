@@ -1,12 +1,16 @@
 #!/bin/bash
 set -e
 set -o pipefail
-source packages.list
-
-cd files
 
 gpg_verify="gpg -d"
 downloader="curl -# -O"
+
+$gpg_verify get.sh.sig
+$gpg_verify packages.list.sig
+
+source packages.list
+
+cd files
 
 package_pinentry="pinentry-0.9.0"
 

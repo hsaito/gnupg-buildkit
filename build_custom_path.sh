@@ -1,5 +1,9 @@
 #!/bin/bash
 
+gpg_verify="gpg -d"
+
+$gpg_verify build_custom_path.sh.sig
+
 if [[ $1 == "" ]] ; then
         echo "Please enter path"
         exit 2
