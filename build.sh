@@ -10,19 +10,17 @@ cd files
 
 tar_cmd="tar xvjf"
 gpg_verify="gpg -d"
-i=0
 
 for package in "${package_list[@]}"
 do
-	$gpg_verify ${package}-${package_version[i]}.tar.bz2.sig
-	$tar_cmd ${package}-${package_version[i]}.tar.bz2
-	cd ${package}-${package_version[i]}
+	$gpg_verify ${package_list[i]}-${package_version[i]}.tar.bz2.sig
+	$tar_cmd ${package_list[i]}-${package_version[i]}.tar.bz2
+	cd ${package_list[i]}-${package_version[i]}
 	./configure $*
 	make
 	make install
 	cd ..
 	rm -r ${package_list[i]}-${package_version[i]}
-	i=i+1
 done
 
 
