@@ -12,7 +12,6 @@ tar_cmd="tar xvjf"
 gpg_verify="gpg -d"
 
 for ((i=0;i<${#package_list[@]};++i)); do
-do
 	$gpg_verify ${package_list[i]}-${package_version[i]}.tar.bz2.sig
 	$tar_cmd ${package_list[i]}-${package_version[i]}.tar.bz2
 	cd ${package_list[i]}-${package_version[i]}
