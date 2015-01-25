@@ -5,7 +5,9 @@ set -o pipefail
 gpg_verify="gpg -d"
 downloader="curl -# -O"
 
+echo "Verifying get.sh"
 $gpg_verify get.sh.sig
+echo "Verifying packages.list"
 $gpg_verify packages.list.sig
 
 source packages.list
