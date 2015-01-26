@@ -7,10 +7,8 @@ set -o pipefail
 tar_cmd="tar xvjf"
 gpg_verify="gpg -d"
 
-echo "Verifying build.sh"
-$gpg_verify build.sh.sig
-echo "Verifying packages.list"
-$gpg_verify packages.list.sig
+echo "Verifying" $0
+$gpg_verify $0.sig
 
 source packages.list
 

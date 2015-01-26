@@ -5,8 +5,8 @@ set -o pipefail
 
 gpg_verify="gpg -d"
 
-echo "Verifying build_custom_path.sh"
-$gpg_verify build_custom_path.sh.sig
+echo "Verifying" $0
+$gpg_verify $0.sig
 
 if [[ $1 == "" ]] ; then
         echo "Please enter path"
