@@ -7,6 +7,9 @@ set -o pipefail
 tar_cmd="tar xvjf"
 gpg_verify="gpg -d"
 
+echo "Verifying" $0
+$gpg_verify $0.sig
+
 source packages.list
 
 cd files
