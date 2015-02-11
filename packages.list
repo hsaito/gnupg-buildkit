@@ -9,6 +9,6 @@ $gpg_verify $0.sig
 
 
 package_list=("libgpg-error" "libksba" "libgcrypt" "libassuan" "npth" "gnupg")
-package_version=("1.17" "1.3.2" "1.6.2" "2.2.0" "1.1" "2.1.1")
+package_version=("1.18" "1.3.2" "1.6.2" "2.2.0" "1.1" "2.1.2")
 package_pinentry="pinentry-0.9.0"
 
