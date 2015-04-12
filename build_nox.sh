@@ -34,9 +34,12 @@ $gpg_verify $package_pinentry.tar.bz2.sig
 $tar_cmd $package_pinentry.tar.bz2
 cd $package_pinentry
 ./configure $* --without-qt4 --without-gtk2 --enable-pinentry-curses
-cd qt4
-sed -i 's,../../../s/pinentry/qt4/,,g;' *.moc
-cd ..
+
+# No longer needed?
+# cd qt4
+# sed -i 's,../../../s/pinentry/qt4/,,g;' *.moc
+# cd ..
+
 make
 make install
 cd ..
