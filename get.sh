@@ -8,11 +8,11 @@ downloader="curl -# -O"
 echo "Verifying" $0
 $gpg_verify $0.sig
 
+echo "Verifying package list"
+$gpg_verify packages.list.sig
 source packages.list
 
 cd files
-
-package_pinentry="pinentry-0.9.0"
 
 touch a.tar.bz2
 touch a.tar.bz2.sig

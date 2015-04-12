@@ -10,6 +10,8 @@ gpg_verify="gpg -d"
 echo "Verifying" $0
 $gpg_verify $0.sig
 
+echo "Verifying package list"
+$gpg_verify packages.list.sig
 source packages.list
 
 cd files

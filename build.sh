@@ -10,6 +10,9 @@ gpg_verify="gpg -d"
 echo "Verifying" $0
 $gpg_verify $0.sig
 
+
+echo "Verifying package list"
+$gpg_verify packages.list.sig
 source packages.list
 
 cd files
@@ -32,9 +35,12 @@ $gpg_verify $package_pinentry.tar.bz2.sig
 $tar_cmd $package_pinentry.tar.bz2
 cd $package_pinentry
 ./configure $*
-cd qt4
-sed -i 's,../../../s/pinentry/qt4/,,g;' *.moc
-cd ..
+
+# No longer needed?
+# cd qt4
+# sed -i 's,../../../s/pinentry/qt4/,,g;' *.moc
+# cd ..
+
 make
 make install
 cd ..
