@@ -14,6 +14,8 @@ Contents
 - updatesig.sh -- Script to update package signers' signatures
 - packages.list -- Contains the location of the package to download
 
+Note: A digital signature for packages.list expires 6 months after its creation. You may have to generate your own digital signature file (or modify the script to skip the verification) if you need to use the packages that are outdated.
+
 Requirements
 ------------
 Currently, these scripts are mainly useful for upgrading GnuPG, because package verifications require existing GnuPG installed.
