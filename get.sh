@@ -2,7 +2,7 @@
 set -e
 set -o pipefail
 
-gpg_verify="gpg -d"
+gpg_verify="gpg --homedir $PWD/.gnupg -d"
 downloader="curl -# -O"
 
 echo "Verifying" $0
