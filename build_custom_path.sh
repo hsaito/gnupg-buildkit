@@ -3,7 +3,7 @@
 set -e
 set -o pipefail
 
-gpg_verify="gpg -d"
+gpg_verify="gpg --homedir $PWD/.gnupg -d"
 
 echo "Verifying" $0
 $gpg_verify $0.sig
