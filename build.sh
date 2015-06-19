@@ -36,11 +36,6 @@ $tar_cmd $package_pinentry.tar.bz2
 cd $package_pinentry
 ./configure $*
 
-# No longer needed?
-# cd qt4
-# sed -i 's,../../../s/pinentry/qt4/,,g;' *.moc
-# cd ..
-
 make
 make install
 cd ..
