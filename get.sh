@@ -27,7 +27,4 @@ for ((i=0;i<${#package_list[@]};++i)); do
         $gpg_verify ${package_list[i]}-${package_version[i]}.tar.bz2.sig
 done
 
-$downloader ftp://ftp.gnupg.org/gcrypt/pinentry/$package_pinentry.tar.bz2
-$downloader ftp://ftp.gnupg.org/gcrypt/pinentry/$package_pinentry.tar.bz2.sig
-$gpg_verify $package_pinentry.tar.bz2.sig
 cd ..

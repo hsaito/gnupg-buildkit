@@ -28,18 +28,5 @@ for ((i=0;i<${#package_list[@]};++i)); do
 	rm -r ${package_list[i]}-${package_version[i]}
 done
 
-
-# Pinentry package seems to require some patching
-# (At least on Ubuntu...)
-$gpg_verify $package_pinentry.tar.bz2.sig
-$tar_cmd $package_pinentry.tar.bz2
-cd $package_pinentry
-./configure $*
-
-make
-make install
-cd ..
-rm -r $package_pinentry
-
 echo "Build complete."
 cd ..
