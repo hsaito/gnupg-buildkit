@@ -16,6 +16,8 @@ Contents
 
 Note: A digital signature for packages.list expires 6 months after its creation. You may have to generate your own digital signature file (or modify the script to skip the verification) if you need to use the packages that are outdated.
 
+If you do not wish the script to verify a signature of scripts and packages, create an empty file called no_verify on the directly with a script. This may be useful when building on a environment without prior installation of GnuPG. However, you will have to verify integrity of the package in some other way.
+
 Requirements
 ------------
 Currently, these scripts are mainly useful for upgrading GnuPG, because package verifications require existing GnuPG installed.

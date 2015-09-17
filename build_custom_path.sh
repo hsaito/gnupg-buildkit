@@ -5,8 +5,10 @@ set -o pipefail
 
 gpg_verify="gpg --homedir $PWD/.gnupg -d"
 
-echo "Verifying" $0
-$gpg_verify $0.sig
+if [ ! -f ./no_verify ]; then
+	echo "Verifying" $0
+	$gpg_verify $0.sig
+fi
 
 if [[ $1 == "" ]] ; then
         echo "Please enter path"
