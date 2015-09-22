@@ -20,6 +20,14 @@ Inhibiting Signature Check (Not Recommended for General Usage)
 --------------------------------------------------------------
 It is possible to inhibit signature check by an existing copy of GnuPG. This may be useful when you are attempting to compile GnuPG modern on a system without any version of GnuPG installed. Simply create a file called no_verify on the root of the directory. However, you will have to verify integrity of the package in some other way.
 
+Workflow
+--------
+If you have any proposal to merge, please issue an pull requests to the next branch.
+
+Necessary modifications are then made to next branch, and passed to signing branch to update digital signature as needed. (This process may be altogether if merge doesn't involve any signing, such as documentations.)
+
+Finally, commit will be merged to the master branch.
+
 Requirements
 ------------
 Currently, these scripts are mainly useful for upgrading GnuPG, because package verifications require existing GnuPG installed.
