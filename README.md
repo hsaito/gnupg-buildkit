@@ -1,9 +1,9 @@
 gnupg-buildkit
 ==============
 
-Build Kit for GNU Privacy Guard
+Build Kit for GNU Privacy Guard modern (2.1.x)
 
-Script for building GnuPG on Linux from the official source.
+Script for building GnuPG modern on Linux from the official source.
 
 Contents
 --------
@@ -16,7 +16,9 @@ Contents
 
 Note: A digital signature for packages.list expires 6 months after its creation. You may have to generate your own digital signature file (or modify the script to skip the verification) if you need to use the packages that are outdated.
 
-If you do not wish the script to verify a signature of scripts and packages, create an empty file called no_verify on the directly with a script. This may be useful when building on a environment without prior installation of GnuPG. However, you will have to verify integrity of the package in some other way.
+Inhibiting Signature Check (Not Recommended for General Usage)
+--------------------------------------------------------------
+It is possible to inhibit signature check by an existing copy of GnuPG. This may be useful when you are attempting to compile GnuPG modern on a system without any version of GnuPG installed. Simply create a file called no_verify on the root of the directory. However, you will have to verify integrity of the package in some other way.
 
 Requirements
 ------------
