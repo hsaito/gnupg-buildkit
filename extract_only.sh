@@ -24,7 +24,6 @@ for ((i=0;i<${#package_list[@]};++i)); do
 		$gpg_verify ${package_list[i]}-${package_version[i]}.tar.bz2.sig
 	fi
 	$tar_cmd ${package_list[i]}-${package_version[i]}.tar.bz2
-	cd ..
 done
 
 echo "Extract complete (nothing else has been done)"
