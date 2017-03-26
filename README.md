@@ -24,9 +24,9 @@ Workflow
 --------
 If you have any proposal to merge, please issue an pull requests to the next branch.
 
-Necessary modifications are then made to next branch, and passed to signing branch to update digital signature as needed. (This process may be altogether if merge doesn't involve any signing, such as documentations.)
-
-Finally, commit will be merged to the master branch.
+Utilities
+---------
+There is a utility to generate packages.list, called [GnuPG_Buildkit_Package_Lister](https://github.com/hsaito/GnuPG_Buildkit_Package_Lister), which automates generation of this file.
 
 Requirements
 ------------
