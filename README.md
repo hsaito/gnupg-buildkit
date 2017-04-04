@@ -24,9 +24,9 @@ Workflow
 --------
 If you have any proposal to merge, please issue an pull requests to the next branch.
 
-Necessary modifications are then made to next branch, and passed to signing branch to update digital signature as needed. (This process may be altogether if merge doesn't involve any signing, such as documentations.)
-
-Finally, commit will be merged to the master branch.
+Utilities
+---------
+There is a utility to generate packages.list, called [GnuPG_Buildkit_Package_Lister](https://github.com/hsaito/GnuPG_Buildkit_Package_Lister), which automates generation of this file.
 
 Requirements
 ------------
@@ -35,27 +35,3 @@ Currently, these scripts are mainly useful for upgrading GnuPG, because package 
 - GnuPG 1.4 or later
 - curl
 - bash
-
-License
--------
-The MIT License (MIT)
-
-Copyright (c) 2015 Hideki Saito
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
